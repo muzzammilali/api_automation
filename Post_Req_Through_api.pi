@@ -1,0 +1,18 @@
+import json
+import requests
+
+# Define the URL to which you want to send the POST request
+url = 'https://example.com/api/endpoint'
+
+# Read data from the file 'data.json'
+with open('data.json', 'r') as file:
+    data = json.load(file)
+
+# Send the POST request using requests.post() method
+response = requests.post(url, json=data)
+
+if response.status_code == 201:
+    print('POST request successful!')
+    print('Response:', response.text)
+else:
+    print('POST request failed with status code:', response.status_code)
