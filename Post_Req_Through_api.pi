@@ -5,7 +5,7 @@ import requests
 url = 'https://example.com/api/endpoint'
 
 # Read data from the file 'data.json'
-with open('data.json', 'r') as file:
+with open('json_obj', 'r') as file:
     data = json.load(file)
 
 # Send the POST request using requests.post() method
